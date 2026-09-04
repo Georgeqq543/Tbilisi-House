@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <title>Tbilisi House — Boutique Stay in Old Tbilisi</title>
+    <meta
+      name="description"
+      content="A warm boutique stay in the heart of Tbilisi with comfortable rooms, local hospitality and an easy direct booking experience."
+    />
+    <meta property="og:title" content="Tbilisi House — Boutique Stay in Old Tbilisi" />
+    <meta
+      property="og:description"
+      content="A warm boutique stay in the heart of Tbilisi with comfortable rooms, local hospitality and an easy direct booking experience."
+    />
+    <meta property="og:type" content="website" />
+    <meta name="theme-color" content="#B96245" />
+    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+    <!-- Demo concept: fictional boutique stay used to show a hospitality landing page. Not a real hotel. -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Hotel",
+        "name": "Tbilisi House — Boutique Stay",
+        "description": "DEMO CONCEPT — replace this JSON-LD with real client data before publishing. Fictional boutique stay in Old Tbilisi.",
+        "url": "https://example.com/tbilisi-house-demo",
+        "telephone": "+995555123456",
+        "email": "hello@tbilisihouse.demo",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "12 Example Street",
+          "addressLocality": "Tbilisi",
+          "addressCountry": "GE"
+        },
+        "priceRange": "GEL 160-320"
+      }
+    </script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main" data-i18n="skip">Skip to content</a>
+
+    <header class="header" id="header">
+      <div class="header-inner">
+        <a class="brand" href="#top">
+          <strong>Tbilisi House</strong>
+          <span>Boutique Stay</span>
+        </a>
+        <nav class="nav-desktop" aria-label="Primary">
+          <a href="#rooms" data-i18n="nav.rooms">Rooms</a>
+          <a href="#experience" data-i18n="nav.experience">Experience</a>
+          <a href="#location" data-i18n="nav.location">Location</a>
+          <a href="#reviews" data-i18n="nav.reviews">Reviews</a>
+          <a href="#faq" data-i18n="nav.faq">FAQ</a>
+        </nav>
+        <div class="header-actions">
+          <div class="lang-switch" role="group" data-i18n-aria="langSwitcher">
+            <button type="button" data-lang="en" aria-pressed="true">EN</button>
+            <button type="button" data-lang="ka" aria-pressed="false">KA</button>
+            <button type="button" data-lang="ru" aria-pressed="false">RU</button>
+          </div>
+          <a class="btn btn-primary header-cta" href="#booking" data-i18n="cta.check">Check availability</a>
+          <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-nav" data-i18n-aria="cta.menu">
+            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+              <path d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <div class="nav-backdrop" id="nav-backdrop" hidden></div>
+    <nav class="mobile-nav" id="mobile-nav" aria-label="Mobile">
+      <a href="#rooms" data-i18n="nav.rooms">Rooms</a>
+      <a href="#experience" data-i18n="nav.experience">Experience</a>
+      <a href="#location" data-i18n="nav.location">Location</a>
+      <a href="#reviews" data-i18n="nav.reviews">Reviews</a>
+      <a href="#faq" data-i18n="nav.faq">FAQ</a>
+      <a href="#booking" class="btn btn-primary" data-i18n="cta.check">Check availability</a>
+    </nav>
+
+    <main id="main">
+      <section class="hero" id="top">
+        <div class="hero-media">
+          <img
+            src="https://images.unsplash.com/photo-1616594039964-ae9021a400a0?auto=format&fit=crop&w=2000&q=80"
+            alt="Sunlit boutique guest room with wood details and warm morning light"
+            id="hero-image"
+          />
+        </div>
+        <div class="hero-content">
+          <div class="hero-copy">
+            <p class="eyebrow" data-i18n="hero.eyebrow">Boutique stay in the heart of Tbilisi</p>
+            <h1 id="hero-title">Stay close to the city.<br />Feel at home.</h1>
+            <p class="lede" data-i18n="hero.subtitle">
+              A warm, design-led guest stay in Old Tbilisi — made for slow mornings, local discoveries and effortless city
+              breaks.
+            </p>
+            <div class="hero-actions">
+              <a class="btn btn-primary" href="#booking" data-i18n="cta.check">Check availability</a>
+              <a class="btn btn-ghost" href="#rooms" data-i18n="cta.explore">Explore the rooms</a>
+            </div>
+            <ul class="hero-points" id="hero-points"></ul>
+          </div>
+          <aside class="hero-card">
+            <strong data-i18n="hero.cardPrice">From 160 GEL / night</strong>
+            <span data-i18n="hero.cardNote">Best for couples and city breaks</span>
+          </aside>
+        </div>
+      </section>
+
+      <section class="benefits" aria-label="Benefits">
+        <div class="wrap">
+          <div class="benefits-row" id="benefits-row"></div>
+        </div>
+      </section>
+
+      <section class="section" id="rooms">
+        <div class="wrap">
+          <div class="section-head">
+            <p class="eyebrow" data-i18n="rooms.eyebrow">Stay</p>
+            <h2 data-i18n="rooms.title">Rooms made for unhurried stays</h2>
+            <p class="lede" data-i18n="rooms.subtitle">
+              Thoughtful spaces, natural textures and everything you need for a comfortable stay in Tbilisi.
+            </p>
+          </div>
+          <div class="rooms-grid" id="rooms-grid"></div>
+        </div>
+      </section>
+
+      <section class="section" id="why">
+        <div class="wrap why-grid">
+          <div>
+            <p class="eyebrow" data-i18n="why.eyebrow">Welcome</p>
+            <h2 data-i18n="why.title">A small place with a big sense of welcome</h2>
+            <p class="lede" data-i18n="why.text">
+              Tbilisi House is designed for guests who want more than a room. Stay in a quiet corner of the old city, start
+              the day with local flavours and get thoughtful recommendations from people who know Tbilisi by heart.
+            </p>
+            <div id="why-items"></div>
+          </div>
+          <div class="why-visual">
+            <img
+              src="https://images.unsplash.com/photo-1519710164239-da123dc03ef4?auto=format&fit=crop&w=1400&q=80"
+              alt="Warm interior with wood, textiles and morning light"
+              loading="lazy"
+            />
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="experience">
+        <div class="wrap">
+          <div class="section-head">
+            <p class="eyebrow" data-i18n="gallery.eyebrow">Atmosphere</p>
+            <h2 data-i18n="gallery.title">The city starts at your doorstep</h2>
+            <p class="lede" data-i18n="gallery.subtitle">
+              Old streets, warm light, good food and a stay that gives you room to breathe.
+            </p>
+          </div>
+          <div class="gallery-grid" id="gallery-grid"></div>
+        </div>
+      </section>
+
+      <section class="section" id="location">
+        <div class="wrap location-grid">
+          <div>
+            <p class="eyebrow" data-i18n="location.eyebrow">Location</p>
+            <h2 data-i18n="location.title">A quiet base in the middle of it all</h2>
+            <ul class="location-list" id="location-list"></ul>
+          </div>
+          <div class="map-card">
+            <div class="map-frame">
+              <iframe
+                title="Old Tbilisi map"
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+                src="https://www.openstreetmap.org/export/embed.html?bbox=44.788%2C41.686%2C44.816%2C41.702&amp;layer=mapnik&amp;marker=41.6934%2C44.8015"
+              ></iframe>
+              <span class="map-pin" aria-hidden="true"></span>
+            </div>
+            <div class="map-actions">
+              <a class="btn btn-primary" id="maps-link" target="_blank" rel="noopener noreferrer" data-i18n="cta.openMaps">Open in Google Maps</a>
+              <a class="btn btn-ghost dark" id="directions-link" target="_blank" rel="noopener noreferrer" data-i18n="cta.directions">Get directions</a>
+            </div>
+            <p class="map-note" data-i18n="location.mapNote">Stylised map for this demo concept — not live turn-by-turn navigation.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="reviews">
+        <div class="wrap">
+          <div class="section-head">
+            <p class="eyebrow" data-i18n="reviews.eyebrow">Guest notes</p>
+            <h2 data-i18n="reviews.title">Warm words from recent stays</h2>
+            <p class="lede" data-i18n="reviews.subtitle">
+              Demonstration testimonials written for this sample landing page — not published guest reviews.
+            </p>
+          </div>
+          <div class="reviews-wrap">
+            <div class="score-pill"><span>★ 5.0</span> <small data-i18n="reviews.scoreLabel">Demo guest score</small></div>
+            <article class="review-card" id="review-card"></article>
+            <div class="review-nav">
+              <button class="icon-btn" type="button" id="review-prev" data-i18n-aria="reviews.prev">‹</button>
+              <button class="icon-btn" type="button" id="review-next" data-i18n-aria="reviews.next">›</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="faq">
+        <div class="wrap">
+          <div class="section-head">
+            <p class="eyebrow" data-i18n="faq.eyebrow">Questions</p>
+            <h2 data-i18n="faq.title">Good to know before you arrive</h2>
+          </div>
+          <div id="faq-list"></div>
+        </div>
+      </section>
+
+      <section class="section booking" id="booking">
+        <div class="wrap booking-grid">
+          <div>
+            <p class="eyebrow" data-i18n="form.eyebrow">Direct booking</p>
+            <h2 data-i18n="form.title">Check availability</h2>
+            <p class="lede" data-i18n="form.subtitle">
+              Tell us your dates and we will come back with options. This demo form does not create a real reservation.
+            </p>
+            <form class="form-card" id="availability-form" novalidate>
+              <div id="form-fields">
+                <div class="form-row two">
+                  <label>
+                    <span data-i18n="form.checkin">Check-in</span>
+                    <input type="date" name="checkin" required />
+                    <span class="field-error" data-error-for="checkin"></span>
+                  </label>
+                  <label>
+                    <span data-i18n="form.checkout">Check-out</span>
+                    <input type="date" name="checkout" required />
+                    <span class="field-error" data-error-for="checkout"></span>
+                  </label>
+                </div>
+                <div class="form-row two">
+                  <label>
+                    <span data-i18n="form.guests">Guests</span>
+                    <select name="guests" required>
+                      <option value="1">1</option>
+                      <option value="2" selected>2</option>
+                      <option value="3">3</option>
+                      <option value="4">4</option>
+                    </select>
+                    <span class="field-error" data-error-for="guests"></span>
+                  </label>
+                  <label>
+                    <span data-i18n="form.roomType">Room type</span>
+                    <select name="room" id="room-select"></select>
+                    <span class="field-error" data-error-for="room"></span>
+                  </label>
+                </div>
+                <div class="form-row">
+                  <label>
+                    <span data-i18n="form.name">Name</span>
+                    <input type="text" name="name" autocomplete="name" required />
+                    <span class="field-error" data-error-for="name"></span>
+                  </label>
+                </div>
+                <div class="form-row two">
+                  <label>
+                    <span data-i18n="form.email">Email</span>
+                    <input type="email" name="email" autocomplete="email" required />
+                    <span class="field-error" data-error-for="email"></span>
+                  </label>
+                  <label>
+                    <span data-i18n="form.phone">WhatsApp / phone</span>
+                    <input type="tel" name="phone" autocomplete="tel" required />
+                    <span class="field-error" data-error-for="phone"></span>
+                  </label>
+                </div>
+                <div class="form-row">
+                  <label>
+                    <span data-i18n="form.message">Message</span>
+                    <textarea name="message" id="message-field"></textarea>
+                    <span class="field-error" data-error-for="message"></span>
+                  </label>
+                </div>
+                <button class="btn btn-primary" type="submit" id="form-submit" data-i18n="form.submit">Check availability</button>
+              </div>
+              <div class="success-state" id="form-success" hidden>
+                <h3 data-i18n="form.successTitle">Thanks — your request has been received.</h3>
+                <p data-i18n="form.successText">
+                  For this demo, no real reservation was created. A real client version can send requests to WhatsApp,
+                  email, Telegram, CRM or Google Sheets.
+                </p>
+                <button class="btn btn-primary" type="button" id="form-reset" data-i18n="cta.sendAnother">Send another request</button>
+              </div>
+            </form>
+          </div>
+          <aside class="direct-card">
+            <h3 data-i18n="form.benefitsTitle">Direct booking benefits</h3>
+            <ul id="form-benefits"></ul>
+          </aside>
+        </div>
+      </section>
+
+      <section class="final-cta" id="contact">
+        <div class="wrap">
+          <h2 data-i18n="final.title">Make Tbilisi your next easy escape</h2>
+          <p class="lede" data-i18n="final.subtitle">A warm room, a walkable city and a local welcome are closer than you think.</p>
+          <div class="final-actions">
+            <a class="btn btn-primary" href="#booking" data-i18n="cta.check">Check availability</a>
+            <a class="btn btn-ghost" id="cta-whatsapp" target="_blank" rel="noopener noreferrer" data-i18n="cta.whatsapp">Message on WhatsApp</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="wrap footer-grid">
+        <div>
+          <a class="brand" href="#top">
+            <strong>Tbilisi House</strong>
+            <span data-i18n="footer.blurb">Boutique Stay in Old Tbilisi</span>
+          </a>
+        </div>
+        <nav class="footer-links" aria-label="Footer">
+          <a href="#rooms" data-i18n="nav.rooms">Rooms</a>
+          <a href="#location" data-i18n="nav.location">Location</a>
+          <a href="#faq" data-i18n="nav.faq">FAQ</a>
+          <a href="#contact" data-i18n="nav.contact">Contact</a>
+        </nav>
+        <div class="footer-contacts">
+          <a id="footer-phone" href="tel:+995555123456">+995 555 123 456</a>
+          <a id="footer-email" href="mailto:hello@tbilisihouse.demo">hello@tbilisihouse.demo</a>
+          <p class="map-note" data-i18n="footer.addressHint">Demo address — replace with your client’s real address.</p>
+          <div class="socials" data-i18n-aria="footer.social">
+            <a id="social-ig" href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">IG</a>
+            <a id="social-wa" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">WA</a>
+            <a id="social-maps" target="_blank" rel="noopener noreferrer" aria-label="Google Maps">MAP</a>
+          </div>
+        </div>
+      </div>
+      <div class="wrap footer-note">
+        <p data-i18n="footer.demo">Demo concept created to demonstrate a multilingual hospitality landing page.</p>
+        <p data-i18n="footer.rights">Tbilisi House is a fictional brand for portfolio demonstration.</p>
+      </div>
+    </footer>
+
+    <a class="whatsapp-float" id="whatsapp-float" target="_blank" rel="noopener noreferrer" data-i18n-aria="whatsapp.label">
+      <svg class="icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+        <path
+          d="M20 11.5A8.5 8.5 0 1 1 8.7 19.4L4 21l1.7-4.5A8.5 8.5 0 0 1 20 11.5zm-8.4 6.6c1.4 0 2.8-.4 4-1.1l.3-.2 2.3.6-.6-2.2.2-.3a6.7 6.7 0 1 0-6.2 3.2zm3.7-5c-.2-.1-1.2-.6-1.4-.7s-.3-.1-.5.1-.5.7-.7.8-.3.1-.5 0a5.5 5.5 0 0 1-1.6-1 6 6 0 0 1-1.1-1.4c-.1-.2 0-.3.1-.4l.3-.4.1-.2c0-.1 0-.3 0-.4s-.5-1.1-.6-1.5-.4-.3-.5-.3h-.4c-.2 0-.4.1-.5.3a1.9 1.9 0 0 0-.6 1.4 3.3 3.3 0 0 0 .7 1.8 7.6 7.6 0 0 0 3 2.8c.4.2.7.3 1 .4.4.2.8.1 1.1.1.3 0 1.1-.4 1.2-.8.1-.4.1-.7.1-.8 0-.1-.2-.1-.4-.2z"
+        />
+      </svg>
+    </a>
+
+    <div class="mobile-bar" id="mobile-bar">
+      <a id="bar-call" href="tel:+995555123456" data-i18n="mobileBar.call">Call</a>
+      <a id="bar-wa" target="_blank" rel="noopener noreferrer" data-i18n="mobileBar.whatsapp">WhatsApp</a>
+      <a class="bar-primary" href="#booking" data-i18n="mobileBar.book">Check dates</a>
+    </div>
+
+    <div class="modal" id="room-modal" hidden>
+      <div class="modal-backdrop" data-close-modal></div>
+      <div class="modal-dialog" role="dialog" aria-modal="true" aria-labelledby="room-modal-title">
+        <button class="modal-close" type="button" data-close-modal data-i18n-aria="cta.close">×</button>
+        <div id="room-modal-body"></div>
+      </div>
+    </div>
+
+    <div class="modal" id="lightbox" hidden>
+      <div class="modal-backdrop" data-close-modal></div>
+      <div class="modal-dialog lightbox-dialog" role="dialog" aria-modal="true">
+        <button class="modal-close" type="button" data-close-modal data-i18n-aria="cta.close">×</button>
+        <img id="lightbox-image" alt="" />
+      </div>
+    </div>
+
+    <script src="js/site-data.js"></script>
+    <script src="js/translations.js"></script>
+    <script src="js/app.js"></script>
+  </body>
+</html>
